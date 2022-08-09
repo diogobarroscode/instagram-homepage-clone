@@ -1,0 +1,224 @@
+/* reseta os estilos padrão dos navegadores */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+/* estilização geral do body */
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* alinhando todo conteúdo do conteiner principal
+ao centro com displat flex */
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+}
+
+/* estilizando a primeira coluna alinhando seu conteúdo ao centro*/
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-right: 1rem;
+}
+
+.instagram-phone img {  
+    height: 50rem;
+}
+
+/* estilização do slide - alinhamento do conteiner */
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-right: 1rem;
+    position: absolute;
+}
+
+/* estilizando as imagens do slide */
+.slide img {  
+    opacity: 0;
+
+    height: 43rem;
+    position: absolute;
+    margin-top: -3.3rem;
+    margin-left: 8.8rem;
+
+    transition: opacity 4000ms;
+}
+
+.slide img.selected{
+    opacity: 1;
+}
+
+
+
+/* estilizando a segunda coluna alinhando ao centro */
+.instagram-continue {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 27rem;
+    min-height: 34rem;
+}
+
+/* estilizando o conteúdo das sections da segunda coluna */
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0rem 1.7rem 0rem;
+    border: 1px solid lightgray;
+}
+
+/* :nth-child() seleciona a classe repetida passando como parametro
+sua posição */
+.group:nth-child(1) {
+    min-height: 19rem;
+    margin-bottom: 1rem;
+}
+
+.instagram-logo {
+    height: 3.5rem;
+    margin-top: 2.2rem;
+}
+
+/* estilização da div que contém a foto do perfil */
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 1.7rem 0.5rem 0.5rem 0.5rem;
+}
+
+.profile-photo img {
+    height: 8rem;
+}
+
+/* botões da área profile */
+.instagram-login {
+    font-weight: bold;
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 6% 0px 3% 0px;
+}
+
+.instagram-logout {
+    color: #0095f6;
+    margin: 1rem 0rem 1rem 0rem;
+    font-weight: 600;
+}
+
+/* estilização da section 2 */
+.not-account {
+    color: rgb(160, 160, 160);
+    margin-top: 0.7rem;
+}
+
+.link-blue a {
+    font-weight: 500;
+    color: #0095f6;
+}
+
+/* estilização e alinhamento da área de download */
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+    margin: 0.4rem 0rem 0.6rem 0rem;
+}
+
+/* botões de download */
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+/* imagens de backgound para os botões de download */
+.app-download:nth-child(1) {
+    background-image: url('../img/apple-button.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('../img/googleplay-button.png');
+}
+
+
+
+
+/* media queries - códigos para compatibilidade no tamanho das telas*/
+
+/* telas de até 1050px */
+@media (max-width: 1050px) {
+    .instagram-phone{
+        margin-right: 1rem;
+    }
+}
+
+/* Para telas de smartphone até 650px */
+@media (max-width: 900px) {
+    body {
+        background-color: rgb(243, 243, 243);
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-tela {
+        display: none;
+    }
+
+    .download {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .download {
+        width: 80%;
+    }
+    
+}
+
+
+
+
