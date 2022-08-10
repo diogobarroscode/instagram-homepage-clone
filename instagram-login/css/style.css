@@ -20,7 +20,7 @@ body {
 }
 
 /* alinhando todo conteúdo do conteiner principal
-ao centro com displat flex */
+ao centro com display flex */
 .instagram-wrapper {
     display: flex;
     align-items: center;
